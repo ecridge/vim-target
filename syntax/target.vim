@@ -79,3 +79,5 @@ highlight link targetInclude  Include
 highlight link targetKeyword  Keyword
 highlight link targetMacro    Macro
 highlight link targetType     Type
+
+let b:current_syntax = "target"
