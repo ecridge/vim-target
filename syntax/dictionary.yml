@@ -1,0 +1,316 @@
+---
+# This file contains every DSL constant, function, and keyword mentioned in the
+# TARGET scripting manual. It also contains every supported C keyword and
+# operator enumerated in the manual, as well as every state name that I could
+# find for the Warthog.
+#
+# I suspect that there are still some large gaps...
+
+directives:
+  - define  # Followed by Something_Like THIS
+  - include  # Followed by /"[^"]*"/
+
+functions:
+  - AXIS
+  - AXMAP1
+  - AXMAP2
+  - ActKey
+  - CHAIN
+  - Configure
+  - D
+  - DXAxis
+  - DefaultMapping
+  - DeferCall
+  - EXEC
+  - EventHandle
+  - Init
+  - KeyAxis
+  - LED
+  - LIST
+  - LockAxis
+  - MapAxis
+  - MapKey
+  - MapKeyIO
+  - MapKeyIOUMD
+  - MapKeyR
+  - MapKeyRIO
+  - MapKeyRIOUMD
+  - MapKeyUMD
+  - REXEC
+  - RotateDXAxis
+  - SEQ
+  - SET
+  - SetCustomCurve
+  - SetJCurve
+  - SetKBLayout
+  - SetKBRate
+  - SetSCurve
+  - SetShiftButton
+  - StopAutoRepeat
+  - TEMPO
+  - TrimDXAxis
+  - abs
+  - cos
+  - ln
+  - main
+  - printf
+  - sin
+  - system
+
+keywords:
+  - while
+  - return
+  - if
+  - goto
+  - else
+  - do
+  - break
+  - UP+
+  - UDTOGGLE
+  - PULSE+
+  - LOCK+
+  - LOCK
+  - KEYON
+  - IOTOGGLE
+  - DOWN+
+
+literals:
+  characters:
+    - /'[^']'/
+  comments:
+    - /\/\/.*$/
+  constants:
+    - AMAXF
+    - ANT_ELEV
+    - APAH
+    - APALT
+    - APDIS
+    - APENG
+    - APPAT
+    - APUOFF
+    - APUON
+    - AXIS_NORMAL
+    - AXIS_REVERSED
+    - BRK
+    - BSB
+    - BSF
+    - BSP
+    - CAPS
+    - CHB
+    - CHF
+    - CSD
+    - CSL
+    - CSR
+    - CSU
+    - DARROW
+    - DEL
+    - DX1
+    - DX10
+    - DX11
+    - DX12
+    - DX13
+    - DX14
+    - DX15
+    - DX16
+    - DX17
+    - DX18
+    - DX19
+    - DX2
+    - DX20
+    - DX21
+    - DX22
+    - DX23
+    - DX24
+    - DX25
+    - DX26
+    - DX27
+    - DX28
+    - DX29
+    - DX3
+    - DX30
+    - DX31
+    - DX32
+    - DX4
+    - DX5
+    - DX6
+    - DX7
+    - DX8
+    - DX9
+    - DXHATDOWN
+    - DXHATDOWNLEFT
+    - DXHATDOWNRIGHT
+    - DXHATLEFT
+    - DXHATRIGHT
+    - DXHATUP
+    - DXHATUPLEFT
+    - DXHATUPRIGHT
+    - DX_SLIDER_AXIS
+    - DX_THROTTLE_AXIS
+    - DX_XROT_AXIS
+    - DX_X_AXIS
+    - DX_YROT_AXIS
+    - DX_Y_AXIS
+    - DX_ZROT_AXIS
+    - DX_Z_AXIS
+    - EACOFF
+    - EACON
+    - EFLNORM
+    - EFLOVER
+    - EFRNORM
+    - END
+    - ENT
+    - ERFOVER
+    - ESC
+    - F1
+    - F10
+    - F11
+    - F12
+    - F2
+    - F3
+    - F4
+    - F5
+    - F6
+    - F7
+    - F8
+    - F9
+    - H1D
+    - H1L
+    - H1R
+    - H1U
+    - H2D
+    - H2L
+    - H2R
+    - H2U
+    - H3D
+    - H3L
+    - H3R
+    - H3U
+    - H4D
+    - H4L
+    - H4P
+    - H4R
+    - H4U
+    - HCougar
+    - HOME
+    - INS
+    - JOYX
+    - JOYY
+    - Joystick
+    - KB_FR
+    - KP0
+    - KP1
+    - KP2
+    - KP3
+    - KP4
+    - KP5
+    - KP6
+    - KP7
+    - KP8
+    - KP9
+    - KPENT
+    - LARROW
+    - LDGH
+    - LED1
+    - LED2
+    - LED3
+    - LED4
+    - LED5
+    - LED_CURRENT
+    - LED_INTENSITY
+    - LED_ONOFF
+    - LMFD
+    - LTB
+    - L_ALT
+    - L_CTL
+    - L_SHIFT
+    - L_WIN
+    - MAN_RNG
+    - MAP_ABSOLUTE
+    - MAP_RELATIVE
+    - MODE_EXCLUDED
+    - MOUSE_X_AXIS
+    - MOUSE_Y_AXIS
+    - MSD
+    - MSL
+    - MSP
+    - MSR
+    - MSU
+    - NUML
+    - PGDN
+    - PGUP
+    - PRNTSCRN
+    - PSB
+    - PSF
+    - PSM
+    - RARROW
+    - RDRDIS
+    - RDRNRM
+    - RDR_X
+    - RDR_Y
+    - RMFD
+    - RNOSTOP
+    - RUDDER
+    - R_ALT
+    - R_CTL
+    - R_SHIFT
+    - R_WIN
+    - S1
+    - S2
+    - S3
+    - S4
+    - SC
+    - SCRLCK
+    - SCX
+    - SCY
+    - SPC
+    - SPDB
+    - SPDF
+    - T16000
+    - TAB
+    - TG1
+    - TG2
+    - THROTTLE
+    - THR_FC
+    - THR_LEFT
+    - THR_RIGHT
+    - Throttle
+    - UARROW
+    - USB
+  numbers:
+    - /0x[A-F0-9]\+/
+    - /\(0\|\d\+\.\d\+\|[1-9]\d*\)/
+  strings:
+    - /"[^"]*"/
+
+operators:
+  - '!'  # Prefix logical NOT.
+  - '!='  # Infix not equal to.
+  - '%'  # Infix modulo.
+  - '&&'  # Prefix double reference.
+  - '&'  # Infix bitwise AND.
+  - '&'  # Prefix reference.
+  - '*'  # Infix multiplication.
+  - '-'  # Infix subtraction.
+  - '-'  # Prefix negation.
+  - '>='  # Infix greater than or equal to.
+  - '>>'  # Infix right shift.
+  - +  # Infix addition.
+  - /  # Infix division.
+  - <  # Infix greater than.
+  - <<  # Infix left shift.
+  - <=  # Infix less than or equal to.
+  - ==  # Infix equal to.
+  - >  # Infix less than.
+  - ^  # Infix bitwise XOR.
+  - |  # Infix bitwise OR.
+
+types:
+  - alias
+  - byte
+  - char
+  - float
+  - int
+  - short
+  - struct
+  - word
+...
