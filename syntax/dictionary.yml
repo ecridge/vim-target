@@ -79,7 +79,7 @@ literals:
     - /'[^']'/
   comments:
     - /\/\/.*$/
-  constants:
+  macros:
     - AMAXF
     - ANT_ELEV
     - APAH
