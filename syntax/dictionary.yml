@@ -300,9 +300,9 @@ operators:
   - <<  # Infix left shift.
   - <=  # Infix less than or equal to.
   - ==  # Infix equal to.
-  - >  # Infix less than.
+  - '>'  # Infix less than.
   - ^  # Infix bitwise XOR.
-  - |  # Infix bitwise OR.
+  - '|'  # Infix bitwise OR.
 
 types:
   - alias
