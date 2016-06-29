@@ -71,13 +71,25 @@ syntax keyword targetKeyword PULSE+ LOCK+ LOCK KEYON IOTOGGLE DOWN+
 syntax keyword targetType alias byte char float int short struct word
 
 " -----------------------------------------------------------------------------
+" Comments
+" -----------------------------------------------------------------------------
+syntax match targetComment "//.*$"
+
+" -----------------------------------------------------------------------------
+" TODOs
+" -----------------------------------------------------------------------------
+syntax match targetTodo "\<\(BUG\|FIXME\|HACK\|TODO\|XXX\)\>"
+
+" -----------------------------------------------------------------------------
 " Highlight links
 " -----------------------------------------------------------------------------
 highlight link targetDefine   Define
+highlight link targetComment  Comment
 highlight link targetFunction Function
 highlight link targetInclude  Include
 highlight link targetKeyword  Keyword
 highlight link targetMacro    Macro
+highlight link targetTodo     Todo
 highlight link targetType     Type
 
 let b:current_syntax = "target"
