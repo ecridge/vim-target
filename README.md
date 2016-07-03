@@ -2,6 +2,14 @@
 
 Adds automatic syntax highlighting.
 
+## Installation
+
+Using [Pathogen](https://github.com/tpope/vim-pathogen):
+
+```bash
+cd ~/.vim/bundle && git clone git@github.com:joecridge/vim-target.git
+```
+
 ## Unlicense
 
 This is free and unencumbered software released into the public domain.
