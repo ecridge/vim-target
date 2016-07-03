@@ -9,8 +9,18 @@ if exists("b:current_syntax")
   finish
 endif
 
+" Data types
+syntax keyword targetType alias byte char float int short struct word
+
 " Preprocessor defines
 syntax keyword targetDefine define
+
+" Preprocessor includes
+syntax keyword targetInclude include
+
+" Language keywords
+syntax keyword targetKeyword DOWN+ KEYON+ LOCK LOCK+ PULSE+ UP+
+syntax keyword targetKeyword break do else goto if return while
 
 " Built-in functions
 syntax keyword targetFunction AXIS AXMAP1 AXMAP2 ActKey CHAIN Configure D
@@ -21,9 +31,6 @@ syntax keyword targetFunction MapKeyRIOUMD MapKeyUMD REXEC RotateDXAxis SEQ SET
 syntax keyword targetFunction SetCustomCurve SetJCurve SetKBLayout SetKBRate
 syntax keyword targetFunction SetSCurve SetShiftButton StopAutoRepeat TEMPO
 syntax keyword targetFunction TrimDXAxis abs cos ln main printf sin system
-
-" Preprocessor includes
-syntax keyword targetInclude include
 
 " Predefined macros
 syntax keyword targetMacro AMAXF ANT_ELEV APAH APALT APDIS APENG APPAT APUOFF
@@ -50,13 +57,6 @@ syntax keyword targetMacro RDRDIS RDRNRM RDR_X RDR_Y RMFD RNOSTOP RUDDER R_ALT
 syntax keyword targetMacro R_CTL R_SHIFT R_WIN S1 S2 S3 S4 SC SCRLCK SCX SCY
 syntax keyword targetMacro SPC SPDB SPDF T16000 TAB TG1 TG2 THROTTLE THR_FC
 syntax keyword targetMacro THR_LEFT THR_RIGHT Throttle UARROW UDTOGGLE USB
-
-" Language keywords
-syntax keyword targetKeyword DOWN+ KEYON+ LOCK LOCK+ PULSE+ UP+
-syntax keyword targetKeyword break do else goto if return while
-
-" Data types
-syntax keyword targetType alias byte char float int short struct word
 
 " Comments
 syntax match targetComment "\v//.*$"
