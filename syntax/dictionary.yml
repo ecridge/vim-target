@@ -58,21 +58,24 @@ functions:
   - system
 
 keywords:
-  - while
-  - return
-  - if
-  - goto
-  - else
-  - do
-  - break
-  - UP+
-  - UDTOGGLE
-  - PULSE+
-  - LOCK+
-  - LOCK
-  - KEYON
-  - IOTOGGLE
-  - DOWN+
+  pure:
+    - break
+    - do
+    - else
+    - goto
+    - if
+    - return
+    - while
+  macros:
+    # The manual makes a point of defining these macros as 'commands',
+    # including the trailing `+` symbol that appears next to them whenever they
+    # are used.
+    - DOWN+
+    - KEYON+
+    - LOCK
+    - LOCK+
+    - PULSE+
+    - UP+
 
 literals:
   characters:
@@ -193,6 +196,7 @@ literals:
     - HCougar
     - HOME
     - INS
+    - IOTOGGLE
     - JOYX
     - JOYY
     - Joystick
@@ -275,6 +279,7 @@ literals:
     - THR_RIGHT
     - Throttle
     - UARROW
+    - UDTOGGLE
     - USB
   numbers:
     - /0x[A-F0-9]\+/
