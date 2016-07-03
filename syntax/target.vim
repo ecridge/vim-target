@@ -19,6 +19,7 @@ syntax match targetOperator "\v([<>])\1"
 syntax match targetNumber    "\v(\w|\.)@<!(0|[1-9]\d*)(\.\d+)?(\w|\.)@!"
 syntax match targetNumber    "\v(\w|\.)@<!0x[A-F0-9]+(\w|\.)@!"
 syntax match targetCharacter "'[^']'"
+syntax match targetCharacter "'\\.'"
 
 " Data types
 syntax keyword targetType alias byte char float int short struct word
@@ -73,6 +74,9 @@ syntax keyword targetMacro R_CTL R_SHIFT R_WIN S1 S2 S3 S4 SC SCRLCK SCX SCY
 syntax keyword targetMacro SPC SPDB SPDF T16000 TAB TG1 TG2 THROTTLE THR_FC
 syntax keyword targetMacro THR_LEFT THR_RIGHT Throttle UARROW UDTOGGLE USB
 
+" Strings
+syntax region targetString start=/\v"/ skip=/\v\\./ end=/\v"/
+
 " Comments
 syntax match targetComment "\v//.*$"
 
@@ -90,6 +94,7 @@ highlight link targetKeyword   Keyword
 highlight link targetMacro     Macro
 highlight link targetNumber    Number
 highlight link targetOperator  Operator
+highlight link targetString    String
 highlight link targetTodo      Todo
 highlight link targetType      Type
 
