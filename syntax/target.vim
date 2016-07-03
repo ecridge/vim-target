@@ -9,6 +9,9 @@ if exists("b:current_syntax")
   finish
 endif
 
+" Operators
+
+
 " Data types
 syntax keyword targetType alias byte char float int short struct word
 
@@ -19,7 +22,11 @@ syntax keyword targetDefine define
 syntax keyword targetInclude include
 
 " Language keywords
-syntax keyword targetKeyword DOWN+ KEYON+ LOCK LOCK+ PULSE+ UP+
+syntax match   targetKeyword "\v<DOWN>\s*\+"
+syntax match   targetKeyword "\v<KEYON>\s*\+"
+syntax match   targetKeyword "\v<LOCK>(\s*\+)?"
+syntax match   targetKeyword "\v<PULSE>\s*\+"
+syntax match   targetKeyword "\v<UP>\s*\+"
 syntax keyword targetKeyword break do else goto if return while
 
 " Built-in functions
