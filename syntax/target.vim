@@ -80,9 +80,6 @@ syntax region targetString start=/\v"/ skip=/\v\\./ end=/\v"/
 " Comments
 syntax match targetComment "\v//.*$"
 
-" TODOs
-syntax match targetTodo "\v<(BUG|FIXME|HACK|TODO|XXX)>"
-
 
 " Highlight links
 highlight link targetDefine    Define
@@ -95,7 +92,6 @@ highlight link targetMacro     Macro
 highlight link targetNumber    Number
 highlight link targetOperator  Operator
 highlight link targetString    String
-highlight link targetTodo      Todo
 highlight link targetType      Type
 
 
