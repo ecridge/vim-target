@@ -1,2 +1,2 @@
-au BufNewFile,BufRead *.tmc set filetype=target
-au BufNewFile,BufRead *.ttm set filetype=target
+autocmd BufNewFile,BufRead *.tmc set filetype=target
+autocmd BufNewFile,BufRead *.ttm set filetype=target

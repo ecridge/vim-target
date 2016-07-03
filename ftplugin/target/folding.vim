@@ -5,9 +5,9 @@ setlocal foldexpr=GetTargetFold(v:lnum)
 " the start of the next fold, or before the end of the containing function
 " (whichever comes first).
 function! GetTargetFold(lnum)
-  if getline(a:lnum) =~ '\V***'
+  if getline(a:lnum) =~# '\V***'
     return '>1'  " Start of section.
-  elseif getline(a:lnum+1) =~ '\V\(***\|\^}\)'
+  elseif getline(a:lnum+1) =~# '\V\(***\|\^}\)'
     return '<1'  " End of section.
   else
     return '-1'  " Infer from context.

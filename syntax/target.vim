@@ -5,7 +5,7 @@
 " Created:  In the middle of the night
 " Modified: 2016-07-03
 
-if exists("b:current_syntax")
+if exists('b:current_syntax')
   finish
 endif
 
@@ -95,6 +95,6 @@ highlight link targetString    String
 highlight link targetType      Type
 
 
-let b:current_syntax = "target"
+let b:current_syntax = 'target'
 
 " vim: set fdm=expr fde=getline(v\:lnum)=~'\\v^\"\ '&&getline(v\:lnum-1)=~'\\v^$'&&getline(v\:lnum+1)=~'\\v^\\w'?'a1'\:getline(v\:lnum)=~'\\v^$'?'s1'\:'-1':
