@@ -10,7 +10,9 @@ if exists("b:current_syntax")
 endif
 
 " Operators
-
+syntax match targetOperator "\v[!<>=]\="
+syntax match targetOperator "\v([<>])\1"
+syntax match targetOperator "\v([!%&*+/<>^|-])\1@!"
 
 " Data types
 syntax keyword targetType alias byte char float int short struct word
@@ -79,6 +81,7 @@ highlight link targetFunction Function
 highlight link targetInclude  Include
 highlight link targetKeyword  Keyword
 highlight link targetMacro    Macro
+highlight link targetOperator Operator
 highlight link targetTodo     Todo
 highlight link targetType     Type
 
