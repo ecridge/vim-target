@@ -9,14 +9,10 @@ if exists("b:current_syntax")
   finish
 endif
 
-" -----------------------------------------------------------------------------
 " Preprocessor defines
-" -----------------------------------------------------------------------------
 syntax keyword targetDefine define
 
-" -----------------------------------------------------------------------------
 " Built-in functions
-" -----------------------------------------------------------------------------
 syntax keyword targetFunction AXIS AXMAP1 AXMAP2 ActKey CHAIN Configure D
 syntax keyword targetFunction DXAxis DefaultMapping DeferCall EXEC EventHandle
 syntax keyword targetFunction Init KeyAxis LED LIST LockAxis MapAxis MapKey
@@ -26,14 +22,10 @@ syntax keyword targetFunction SetCustomCurve SetJCurve SetKBLayout SetKBRate
 syntax keyword targetFunction SetSCurve SetShiftButton StopAutoRepeat TEMPO
 syntax keyword targetFunction TrimDXAxis abs cos ln main printf sin system
 
-" -----------------------------------------------------------------------------
 " Preprocessor includes
-" -----------------------------------------------------------------------------
 syntax keyword targetInclude include
 
-" -----------------------------------------------------------------------------
 " Predefined macros
-" -----------------------------------------------------------------------------
 syntax keyword targetMacro AMAXF ANT_ELEV APAH APALT APDIS APENG APPAT APUOFF
 syntax keyword targetMacro APUON AXIS_NORMAL AXIS_REVERSED BRK BSB BSF BSP CAPS
 syntax keyword targetMacro CHB CHF CSD CSL CSR CSU DARROW DEL DX1 DX10 DX11
@@ -59,30 +51,21 @@ syntax keyword targetMacro S1 S2 S3 S4 SC SCRLCK SCX SCY SPC SPDB SPDF T16000
 syntax keyword targetMacro TAB TG1 TG2 THROTTLE THR_FC THR_LEFT THR_RIGHT
 syntax keyword targetMacro Throttle UARROW USB
 
-" -----------------------------------------------------------------------------
 " Language keywords
-" -----------------------------------------------------------------------------
 syntax keyword targetKeyword while return if goto else do break UP+ UDTOGGLE
 syntax keyword targetKeyword PULSE+ LOCK+ LOCK KEYON IOTOGGLE DOWN+
 
-" -----------------------------------------------------------------------------
 " Data types
-" -----------------------------------------------------------------------------
 syntax keyword targetType alias byte char float int short struct word
 
-" -----------------------------------------------------------------------------
 " Comments
-" -----------------------------------------------------------------------------
 syntax match targetComment "\v//.*$"
 
-" -----------------------------------------------------------------------------
 " TODOs
-" -----------------------------------------------------------------------------
 syntax match targetTodo "\v<(BUG|FIXME|HACK|TODO|XXX)>"
 
-" -----------------------------------------------------------------------------
+
 " Highlight links
-" -----------------------------------------------------------------------------
 highlight link targetDefine   Define
 highlight link targetComment  Comment
 highlight link targetFunction Function
@@ -92,6 +75,7 @@ highlight link targetMacro    Macro
 highlight link targetTodo     Todo
 highlight link targetType     Type
 
+
 let b:current_syntax = "target"
 
-" vim:fdm=marker:tw=79
+" vim: set fdm=expr fde=getline(v\:lnum)=~'\\v^\"\ '&&getline(v\:lnum-1)=~'\\v^$'&&getline(v\:lnum+1)=~'\\v^\\w'?'a1'\:getline(v\:lnum)=~'\\v^$'?'s1'\:'-1':
