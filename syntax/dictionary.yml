@@ -160,9 +160,9 @@ literals:
     - EFLNORM
     - EFLOVER
     - EFRNORM
+    - EFROVER
     - END
     - ENT
-    - ERFOVER
     - ESC
     - F1
     - F10
