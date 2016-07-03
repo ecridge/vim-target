@@ -10,9 +10,15 @@ if exists("b:current_syntax")
 endif
 
 " Operators
+syntax match targetOperator "\v[!%&*+/<>^|-]"
+syntax match targetOperator "\v(\[|\])"
 syntax match targetOperator "\v[!<>=]\="
 syntax match targetOperator "\v([<>])\1"
-syntax match targetOperator "\v([!%&*+/<>^|-])\1@!"
+
+" Literals
+syntax match targetNumber    "\v(\w|\.)@<!(0|[1-9]\d*)(\.\d+)?(\w|\.)@!"
+syntax match targetNumber    "\v(\w|\.)@<!0x[A-F0-9]+(\w|\.)@!"
+syntax match targetCharacter "'[^']'"
 
 " Data types
 syntax keyword targetType alias byte char float int short struct word
@@ -75,15 +81,17 @@ syntax match targetTodo "\v<(BUG|FIXME|HACK|TODO|XXX)>"
 
 
 " Highlight links
-highlight link targetDefine   Define
-highlight link targetComment  Comment
-highlight link targetFunction Function
-highlight link targetInclude  Include
-highlight link targetKeyword  Keyword
-highlight link targetMacro    Macro
-highlight link targetOperator Operator
-highlight link targetTodo     Todo
-highlight link targetType     Type
+highlight link targetDefine    Define
+highlight link targetComment   Comment
+highlight link targetCharacter Character
+highlight link targetFunction  Function
+highlight link targetInclude   Include
+highlight link targetKeyword   Keyword
+highlight link targetMacro     Macro
+highlight link targetNumber    Number
+highlight link targetOperator  Operator
+highlight link targetTodo      Todo
+highlight link targetType      Type
 
 
 let b:current_syntax = "target"
