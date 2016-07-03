@@ -73,12 +73,12 @@ syntax keyword targetType alias byte char float int short struct word
 " -----------------------------------------------------------------------------
 " Comments
 " -----------------------------------------------------------------------------
-syntax match targetComment "//.*$"
+syntax match targetComment "\v//.*$"
 
 " -----------------------------------------------------------------------------
 " TODOs
 " -----------------------------------------------------------------------------
-syntax match targetTodo "\<\(BUG\|FIXME\|HACK\|TODO\|XXX\)\>"
+syntax match targetTodo "\v<(BUG|FIXME|HACK|TODO|XXX)>"
 
 " -----------------------------------------------------------------------------
 " Highlight links
@@ -93,3 +93,5 @@ highlight link targetTodo     Todo
 highlight link targetType     Type
 
 let b:current_syntax = "target"
+
+" vim:fdm=marker:tw=79
