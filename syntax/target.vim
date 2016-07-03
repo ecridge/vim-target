@@ -1,9 +1,9 @@
 " Name:     Thrustmaster TARGET Script plugin for Vim
 " Author:   Joe Cridge <joe.cridge@me.com>
 " URL:      https://github.com/joecridge/vim-target.git
-" License:  Apache-2.0
+" License:  Unlicense
 " Created:  In the middle of the night
-" Modified: 2016-06-29
+" Modified: 2016-07-03
 
 if exists("b:current_syntax")
   finish
