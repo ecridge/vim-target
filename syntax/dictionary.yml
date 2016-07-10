@@ -1,33 +1,509 @@
 ---
-# This file contains every DSL constant, function, and keyword mentioned in the
-# TARGET scripting manual. It also contains every supported C keyword and
-# operator enumerated in the manual, as well as every state name that I could
-# find for the Warthog.
+# This file enumerates the identifiers defined in the TARGET DSL headers, along
+# with the supported C keywords and operators as listed in the DSL scripting
+# manual.
 #
-# I suspect that there are still some large gaps...
+# It is a bit of a cursory collation, and so is not necessarily definitive.
 
-directives:
-  - define  # Followed by Something_Like THIS
-  - include  # Followed by /"[^"]*"/
+defines:
+  - ALT
+  - AMAX
+  - AMAXF
+  - APPS
+  - ASC_AGR
+  - ASC_SHF
+  - AXDATASIZE
+  - AXIS_NORMAL
+  - AXIS_REVERSED
+  - BRK
+  - BSP
+  - CAPS
+  - CREATE_JOYSTICK
+  - CREATE_KEYBOARD
+  - CREATE_MOUSE
+  - CTL
+  - CURRENT
+  - DARROW
+  - DEL
+  - DELAY
+  - DOWN
+  - DX1
+  - DX10
+  - DX11
+  - DX12
+  - DX13
+  - DX14
+  - DX15
+  - DX16
+  - DX17
+  - DX18
+  - DX19
+  - DX2
+  - DX20
+  - DX21
+  - DX22
+  - DX23
+  - DX24
+  - DX25
+  - DX26
+  - DX27
+  - DX28
+  - DX29
+  - DX3
+  - DX30
+  - DX31
+  - DX32
+  - DX4
+  - DX5
+  - DX6
+  - DX7
+  - DX8
+  - DX9
+  - DXHATDOWN
+  - DXHATDOWNLEFT
+  - DXHATDOWNRIGHT
+  - DXHATLEFT
+  - DXHATRIGHT
+  - DXHATUP
+  - DXHATUPLEFT
+  - DXHATUPRIGHT
+  - DX_SLIDER_AXIS
+  - DX_THROTTLE_AXIS
+  - DX_XROT_AXIS
+  - DX_X_AXIS
+  - DX_YROT_AXIS
+  - DX_Y_AXIS
+  - DX_ZROT_AXIS
+  - DX_Z_AXIS
+  - END
+  - ENT
+  - ESC
+  - EV_GAME_DATA
+  - EV_HID_INPUT_DATA
+  - EV_HID_INPUT_DATA_FILTER
+  - EV_HID_NONE
+  - EV_USR
+  - F1
+  - F10
+  - F11
+  - F12
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
+  - F18
+  - F19
+  - F2
+  - F20
+  - F21
+  - F22
+  - F23
+  - F24
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - HOME
+  - INS
+  - IN_MAX_AXES
+  - IN_MAX_BUTTONS
+  - IN_MAX_HAT
+  - IN_OFFSET_AXIS_RX
+  - IN_OFFSET_AXIS_RY
+  - IN_OFFSET_AXIS_RZ
+  - IN_OFFSET_AXIS_SLIDER1
+  - IN_OFFSET_AXIS_SLIDER2
+  - IN_OFFSET_AXIS_SLIDER3
+  - IN_OFFSET_AXIS_SLIDER4
+  - IN_OFFSET_AXIS_THROTTLE
+  - IN_OFFSET_AXIS_X
+  - IN_OFFSET_AXIS_Y
+  - IN_OFFSET_AXIS_Z
+  - IN_POSITION_AXES
+  - IN_POSITION_AXIS_RX
+  - IN_POSITION_AXIS_RY
+  - IN_POSITION_AXIS_RZ
+  - IN_POSITION_AXIS_SLIDER1
+  - IN_POSITION_AXIS_SLIDER2
+  - IN_POSITION_AXIS_SLIDER3
+  - IN_POSITION_AXIS_SLIDER4
+  - IN_POSITION_AXIS_THROTTLE
+  - IN_POSITION_AXIS_X
+  - IN_POSITION_AXIS_Y
+  - IN_POSITION_AXIS_Z
+  - IN_POSITION_BUTTONS
+  - IN_POSITION_HAT
+  - IN_POSITION_SIZE
+  - IOTOGGLE
+  - JUMP
+  - KB_ENG
+  - KB_FR
+  - KB_GER
+  - KDATASIZE
+  - KEYON
+  - KP0
+  - KP1
+  - KP2
+  - KP3
+  - KP4
+  - KP5
+  - KP6
+  - KP7
+  - KP8
+  - KP9
+  - KPENT
+  - LALT
+  - LARROW
+  - LCTL
+  - LED0
+  - LED1
+  - LED2
+  - LED3
+  - LED4
+  - LED5
+  - LED_CURRENT
+  - LED_INTENSITY
+  - LED_ONOFF
+  - LIST
+  - LOCK
+  - LSHF
+  - LWIN
+  - L_ALT
+  - L_CTL
+  - L_SHIFT
+  - L_WIN
+  - MAP_ABSOLUTE
+  - MAP_IPTR
+  - MAP_IPTR_VPN
+  - MAP_NORMAL
+  - MAP_RELATIVE
+  - MAP_THISCALL
+  - MAXAXDATA
+  - MAXKEYDATA
+  - MODE_EXCLUDED
+  - MODE_FILTERED
+  - MODE_KEEPENABLED
+  - MOUSE_BTN4
+  - MOUSE_BTN5
+  - MOUSE_CENTER
+  - MOUSE_LEFT
+  - MOUSE_RIGHT
+  - MOUSE_X_AXIS
+  - MOUSE_Y_AXIS
+  - MOUSE_Z_AXIS
+  - NUML
+  - OUT_ID_AXIS
+  - OUT_ID_BUTTON
+  - OUT_ID_HAT
+  - OUT_ID_HID_MAX
+  - OUT_ID_LED
+  - OUT_ID_LED_1
+  - OUT_ID_LED_2
+  - OUT_ID_LED_3
+  - OUT_ID_LED_4
+  - OUT_ID_LED_5
+  - OUT_ID_LED_BACKLIGHT
+  - OUT_ID_LED_INTENSITY
+  - OUT_ID_TIMER
+  - OUT_TYPE_GAME
+  - OUT_TYPE_KEYBOARD
+  - OUT_TYPE_MOUSE
+  - OUT_TYPE_UNKNOWN
+  - OUT_VALUE_BUTTON_PRESS
+  - OUT_VALUE_BUTTON_PRESS_RELEASE
+  - OUT_VALUE_BUTTON_RELEASE
+  - OUT_VALUE_BUTTON_TOGGLE
+  - OUT_VALUE_TIMER_START
+  - OUT_VALUE_TIMER_STOP
+  - PGDN
+  - PGUP
+  - POVCENTER
+  - POVD
+  - POVDL
+  - POVDR
+  - POVL
+  - POVR
+  - POVU
+  - POVUL
+  - POVUR
+  - PRNTSCRN
+  - PROC
+  - PULSE
+  - RALT
+  - RARROW
+  - RCTL
+  - RNOSTOP
+  - RSHF
+  - RWIN
+  - R_ALT
+  - R_CTL
+  - R_SHIFT
+  - R_WIN
+  - SCRLCK
+  - SEEK_CUR
+  - SEEK_END
+  - SEEK_SET
+  - SHF
+  - SPC
+  - TAB
+  - UARROW
+  - UDTOGGLE
+  - UP
+  - VAR_ALIAS
+  - VAR_BYTE
+  - VAR_CHAR
+  - VAR_FLOAT
+  - VAR_INT
+  - VAR_NONE
+  - VAR_SHORT
+  - VAR_STRUCT
+  - VAR_WORD
+
+  # Warthog joystick
+  - H1D
+  - H1L
+  - H1R
+  - H1U
+  - H2D
+  - H2L
+  - H2R
+  - H2U
+  - H3D
+  - H3L
+  - H3R
+  - H3U
+  - H4D
+  - H4L
+  - H4P
+  - H4R
+  - H4U
+  - JOYX
+  - JOYY
+  - POV
+  - S1
+  - S2
+  - S3
+  - S4
+  - TG1
+  - TG2
+
+  # Warthog throttle
+  - APAH
+  - APALT
+  - APDIS
+  - APENG
+  - APPAT
+  - APUOFF
+  - APUON
+  - BSB
+  - BSF
+  - BSM
+  - CHB
+  - CHF
+  - CHM
+  - CS
+  - CSD
+  - CSL
+  - CSR
+  - CSU
+  - EACOFF
+  - EACON
+  - EFLNORM
+  - EFLOVER
+  - EFRNORM
+  - EFROVER
+  - EOLIGN
+  - EOLMOTOR
+  - EOLNORM
+  - EORIGN
+  - EORMOTOR
+  - EORNORM
+  - FLAPD
+  - FLAPM
+  - FLAPU
+  - IDLELOFF
+  - IDLELON
+  - IDLEROFF
+  - IDLERON
+  - LDGH
+  - LTB
+  - MSD
+  - MSL
+  - MSP
+  - MSR
+  - MSU
+  - PSB
+  - PSF
+  - PSM
+  - RDRDIS
+  - RDRNRM
+  - SC
+  - SCX
+  - SCY
+  - SPDB
+  - SPDF
+  - SPDM
+  - THR_FC
+  - THR_LEFT
+  - THR_RIGHT
+
+  # Cougar
+  - ANT_ELEV
+  - DFM
+  - MAN_RNG
+  - RDR_X
+  - RDR_Y
+  - RUDDER
+  - T1
+  - T10
+  - T2
+  - T3
+  - T4
+  - T5
+  - T6
+  - T7
+  - T8
+  - T9
+  - THROTTLE
+
+  # T16000 and T16000L
+  - B10
+  - B11
+  - B12
+  - B13
+  - B14
+  - B15
+  - B16
+  - B5
+  - B6
+  - B7
+  - B8
+  - B9
+  - HAT
+  - THR
+  - TS1
+  - TS2
+  - TS3
+  - TS4
+
+  # LMFD and RMFD
+  - BRTD
+  - BRTU
+  - COND
+  - CONU
+  - GAIND
+  - GAINU
+  - OSB01
+  - OSB02
+  - OSB03
+  - OSB04
+  - OSB05
+  - OSB06
+  - OSB07
+  - OSB08
+  - OSB09
+  - OSB10
+  - OSB11
+  - OSB12
+  - OSB13
+  - OSB14
+  - OSB15
+  - OSB16
+  - OSB17
+  - OSB18
+  - OSB19
+  - OSB20
+  - SYMD
+  - SYMU
+
+  # TWCS throttle
+  - TANT
+  - TBTN1
+  - TBTN2
+  - TBTN3
+  - TBTN4
+  - TBTN5
+  - THAT1D
+  - THAT1L
+  - THAT1R
+  - THAT1U
+  - THAT2
+  - THAT2D
+  - THAT2L
+  - THAT2R
+  - THAT2U
+  - THAT3D
+  - THAT3L
+  - THAT3R
+  - THAT3U
+  - TLOCK
+  - TMSTX
+  - TMSTY
+  - TRDR
+  - TTHR
+
+  # TFRP rudder
+  - TRPLEFT
+  - TRPRIGHT
+  - TRUDDER
 
 functions:
+  - ASMAlloc
+  - ASMFind
   - AXIS
   - AXMAP1
   - AXMAP2
+  - Abort
   - ActKey
+  - AutoRepeat
+  - AxisVal
   - CHAIN
   - Configure
   - D
+  - DX
   - DXAxis
+  - DXSetAxis
+  - DefEventHandler
   - DefaultMapping
   - DeferCall
+  - Dim
   - EXEC
-  - EventHandle
+  - Exclude
+  - FreeLibrary
+  - FreeProcInstance
+  - GameOutput
+  - GetAxisData
+  - GetCustomCurveValue
+  - GetDeviceCapabilities
+  - GetDeviceData
+  - GetIndexJoy
+  - GetInputValue
+  - GetLayerBits
+  - GetListPos
+  - GetMouseX
+  - GetMouseY
+  - GetProcAddress
+  - Hat2Btn
+  - HatUp
+  - HoldKey
   - Init
+  - InitSocketServer
+  - Key
   - KeyAxis
+  - KeyD
+  - KeyU
   - LED
-  - LIST
+  - LI
+  - LoadLibrary
   - LockAxis
+  - LockDXAxis
+  - LockPulseTimestamps
+  - MakeProcInstance
+  - Map
   - MapAxis
   - MapKey
   - MapKeyIO
@@ -35,252 +511,222 @@ functions:
   - MapKeyR
   - MapKeyRIO
   - MapKeyRIOUMD
+  - MapKeyRUMD
   - MapKeyUMD
+  - MapList
+  - P2Curve
+  - PlugGame
+  - PlugKeyboard
+  - PlugMouse
+  - PostEvent
+  - ProcInstCallback
+  - PulseKey
   - REXEC
+  - RJLoop
+  - RPT
+  - RegisterGameCallback
+  - RemoveEvent
   - RotateDXAxis
   - SEQ
   - SET
+  - Select
+  - SelectUsbDevice
+  - SelectUsbDevices
   - SetCustomCurve
+  - SetEventHandler
   - SetJCurve
   - SetKBLayout
   - SetKBRate
   - SetSCurve
   - SetShiftButton
+  - Sleep
   - StopAutoRepeat
   - TEMPO
   - TrimDXAxis
+  - VirtualOutput
+  - X
+  - _AXMAP2
+  - _CHAIN
+  - _GetMouse
+  - _SEQ
+  - _key
   - abs
+  - acos
+  - asin
+  - atan
+  - atan2
+  - axis1
+  - axisproc
+  - axmap1proc
+  - axmap2proc
+  - chainproc
+  - clip
   - cos
+  - defined
+  - dis
+  - elements
+  - eval
+  - execproc
+  - execute
+  - exp
+  - fclose
+  - fcurve
+  - feof
+  - fgetc
+  - fopen
+  - fputc
+  - fread
+  - free
+  - fseek
+  - ftell
+  - fwrite
+  - getmem
+  - gettype
+  - ieval
+  - iexecute
+  - input
+  - ledproc
   - ln
+  - log
   - main
+  - malloc
+  - memcpy
+  - msize
+  - pow
   - printf
+  - putchar
+  - realloc
+  - regexproc
+  - seqproc
+  - setmem
+  - sgn
   - sin
+  - sizeof
+  - sprintf
+  - sqrt
+  - strcat
+  - strchr
+  - strcmp
+  - strdel
+  - strins
+  - strlen
+  - strname
+  - strstr
+  - strsub
   - system
+  - tan
+  - tempo1
+  - tempoproc
+
+globals:
+  - ASC
+  - ASCE
+  - ASCF
+  - ASCG
+  - Axis
+  - CONFIG_HOTAS1
+  - CONFIG_HOTAS2
+  - CONFIG_T16000
+  - HCougar
+  - HCougarMap
+  - HWID_HOTAS
+  - HWID_T16000
+  - HWID_WARTHOG_JOYSTICK
+  - HWID_WARTHOG_THROTTLE
+  - Joystick
+  - JoystickMap
+  - KBLayout
+  - LMFD
+  - MFDMap
+  - RMFD
+  - T16000
+  - T16000L
+  - T16000Map
+  - TFRPRudder
+  - TFRPRudderMap
+  - TWCSThrottle
+  - TWCSThrottleMap
+  - Throttle
+  - ThrottleMap
+  - USB
+  - VARSIZE
+  - _evh
+  - _gch
+  - alloc_locked
+  - axdata
+  - chaincall
+  - chainlock
+  - csStatus
+  - devdata
+  - devicedata
+  - gameSocketData
+  - gllk
+  - h16000LStatus
+  - h16000Status
+  - h1Status
+  - h1cStatus
+  - h2blookup
+  - hTWCSThrottleStatus
+  - hatlkup
+  - hatstatus
+  - joy0
+  - joy1
+  - joy10
+  - joy11
+  - joy12
+  - joy13
+  - joy14
+  - joy15
+  - joy16
+  - joy2
+  - joy3
+  - joy4
+  - joy5
+  - joy6
+  - joy7
+  - joy8
+  - joy9
+  - kb_delay
+  - kb_pulse
+  - keyalloc
+  - kpos
+  - layer
+  - layer_sw
+  - ledcmd
+  - tmp
+  - vbtntbl
+  - virtualj
 
 keywords:
-  pure:
-    - break
-    - do
-    - else
-    - goto
-    - if
-    - return
-    - while
-  macros:
-    # The manual makes a point of defining these macros as 'commands',
-    # including the trailing `+` symbol that appears next to them whenever they
-    # are used.
-    - DOWN+
-    - KEYON+
-    - LOCK
-    - LOCK+
-    - PULSE+
-    - UP+
+  - DOWN+
+  - KEYON+
+  - LOCK
+  - LOCK+
+  - L_ALT+
+  - L_CTL+
+  - L_SHIFT+
+  - L_WIN+
+  - PULSE+
+  - R_ALT+
+  - R_CTL+
+  - R_SHIFT+
+  - R_WIN+
+  - UP+
+  - break
+  - define
+  - do
+  - else
+  - goto
+  - if
+  - include
+  - return
+  - while
 
 literals:
   characters:
     - /'[^']'/
   comments:
     - /\/\/.*$/
-  macros:
-    - AMAXF
-    - ANT_ELEV
-    - APAH
-    - APALT
-    - APDIS
-    - APENG
-    - APPAT
-    - APUOFF
-    - APUON
-    - AXIS_NORMAL
-    - AXIS_REVERSED
-    - BRK
-    - BSB
-    - BSF
-    - BSP
-    - CAPS
-    - CHB
-    - CHF
-    - CSD
-    - CSL
-    - CSR
-    - CSU
-    - DARROW
-    - DEL
-    - DX1
-    - DX10
-    - DX11
-    - DX12
-    - DX13
-    - DX14
-    - DX15
-    - DX16
-    - DX17
-    - DX18
-    - DX19
-    - DX2
-    - DX20
-    - DX21
-    - DX22
-    - DX23
-    - DX24
-    - DX25
-    - DX26
-    - DX27
-    - DX28
-    - DX29
-    - DX3
-    - DX30
-    - DX31
-    - DX32
-    - DX4
-    - DX5
-    - DX6
-    - DX7
-    - DX8
-    - DX9
-    - DXHATDOWN
-    - DXHATDOWNLEFT
-    - DXHATDOWNRIGHT
-    - DXHATLEFT
-    - DXHATRIGHT
-    - DXHATUP
-    - DXHATUPLEFT
-    - DXHATUPRIGHT
-    - DX_SLIDER_AXIS
-    - DX_THROTTLE_AXIS
-    - DX_XROT_AXIS
-    - DX_X_AXIS
-    - DX_YROT_AXIS
-    - DX_Y_AXIS
-    - DX_ZROT_AXIS
-    - DX_Z_AXIS
-    - EACOFF
-    - EACON
-    - EFLNORM
-    - EFLOVER
-    - EFRNORM
-    - EFROVER
-    - END
-    - ENT
-    - ESC
-    - F1
-    - F10
-    - F11
-    - F12
-    - F2
-    - F3
-    - F4
-    - F5
-    - F6
-    - F7
-    - F8
-    - F9
-    - H1D
-    - H1L
-    - H1R
-    - H1U
-    - H2D
-    - H2L
-    - H2R
-    - H2U
-    - H3D
-    - H3L
-    - H3R
-    - H3U
-    - H4D
-    - H4L
-    - H4P
-    - H4R
-    - H4U
-    - HCougar
-    - HOME
-    - INS
-    - IOTOGGLE
-    - JOYX
-    - JOYY
-    - Joystick
-    - KB_FR
-    - KP0
-    - KP1
-    - KP2
-    - KP3
-    - KP4
-    - KP5
-    - KP6
-    - KP7
-    - KP8
-    - KP9
-    - KPENT
-    - LARROW
-    - LDGH
-    - LED1
-    - LED2
-    - LED3
-    - LED4
-    - LED5
-    - LED_CURRENT
-    - LED_INTENSITY
-    - LED_ONOFF
-    - LMFD
-    - LTB
-    - L_ALT
-    - L_CTL
-    - L_SHIFT
-    - L_WIN
-    - MAN_RNG
-    - MAP_ABSOLUTE
-    - MAP_RELATIVE
-    - MODE_EXCLUDED
-    - MOUSE_X_AXIS
-    - MOUSE_Y_AXIS
-    - MSD
-    - MSL
-    - MSP
-    - MSR
-    - MSU
-    - NUML
-    - PGDN
-    - PGUP
-    - PRNTSCRN
-    - PSB
-    - PSF
-    - PSM
-    - RARROW
-    - RDRDIS
-    - RDRNRM
-    - RDR_X
-    - RDR_Y
-    - RMFD
-    - RNOSTOP
-    - RUDDER
-    - R_ALT
-    - R_CTL
-    - R_SHIFT
-    - R_WIN
-    - S1
-    - S2
-    - S3
-    - S4
-    - SC
-    - SCRLCK
-    - SCX
-    - SCY
-    - SPC
-    - SPDB
-    - SPDF
-    - T16000
-    - TAB
-    - TG1
-    - TG2
-    - THROTTLE
-    - THR_FC
-    - THR_LEFT
-    - THR_RIGHT
-    - Throttle
-    - UARROW
-    - UDTOGGLE
-    - USB
   numbers:
     - /0x[A-F0-9]+/
     - /0|\d+\.\d+|[1-9]\d*/
@@ -310,12 +756,16 @@ operators:
   - '|'  # Infix bitwise OR.
 
 types:
+  - DXAxisStatus
   - alias
   - byte
   - char
   - float
   - int
+  - sAxis
+  - sDevice
   - short
+  - stGameCfg
   - struct
   - word
 ...
